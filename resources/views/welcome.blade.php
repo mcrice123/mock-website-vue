@@ -15,6 +15,8 @@
             <h1 class="title is-1"><a href="<?php echo URL::to('/'); ?>">Mock Website</a></h1>
             <h2 class="subtitle is-3">An Experiment with Vue</h2>
 
+            <example></example>
+
             <div class="section">
                 <div class="container">
                     <p class="title is-5">Response from GET request</p>
@@ -29,6 +31,7 @@
             </div>
 
             <a class="button is-link" href="<?php echo URL::to('/'); ?>/projects/new">Create a Project</a>
+            <a class="button is-link" href="<?php echo URL::to('/'); ?>/shared-state-101">Shared State 101</a>
 
             <script src="<?php echo URL::to('/'); ?>/js/app.js"></script>
         </div>
