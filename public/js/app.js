@@ -19807,6 +19807,27 @@ new vue_dist_vue_min_js__WEBPACK_IMPORTED_MODULE_1___default.a({
     });
   }
 });
+/* Shared State 101 */
+
+var store = {
+  user: {
+    name: 'Jane Doe'
+  }
+};
+new vue_dist_vue_min_js__WEBPACK_IMPORTED_MODULE_1___default.a({
+  el: '#one',
+  data: {
+    foo: 'bar',
+    shared: store
+  }
+});
+new vue_dist_vue_min_js__WEBPACK_IMPORTED_MODULE_1___default.a({
+  el: '#two',
+  data: {
+    foo: 'other bar',
+    shared: store
+  }
+});
 
 /***/ }),
 
