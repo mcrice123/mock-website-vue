@@ -19828,6 +19828,35 @@ new vue_dist_vue_min_js__WEBPACK_IMPORTED_MODULE_1___default.a({
     shared: store
   }
 });
+/* Custom Input (Coupon Code) */
+
+vue_dist_vue_min_js__WEBPACK_IMPORTED_MODULE_1___default.a.component('coupon', {
+  props: ['code'],
+  template: "\n        <input type=\"text\" :value=\"code\" @input=\"updateCode($event.target.value)\" ref=\"input\">\n    ",
+  data: function data() {
+    return {
+      invalids: ['ALLFREE', 'SOMETHINGELSE']
+    };
+  },
+  methods: {
+    updateCode: function updateCode(code) {
+      // Validation, etc 
+      if (this.invalids.includes(code)) {
+        alert('This coupon is no longer valid. Sorry!');
+        this.$refs.input.value = '';
+        code = '';
+      }
+
+      this.$emit('input', code);
+    }
+  }
+});
+new vue_dist_vue_min_js__WEBPACK_IMPORTED_MODULE_1___default.a({
+  el: "#coupon-input",
+  data: {
+    coupon: 'FREEBIE'
+  }
+});
 
 /***/ }),
 

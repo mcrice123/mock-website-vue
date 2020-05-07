@@ -39,3 +39,8 @@ Route::post('projects/store', 'ProjectsController@store');
 Route::get('/shared-state-101', function() {
     return view('shared-state-101');
 });
+
+// Get Coupon view 
+Route::get('/coupon', function() {
+    return view('coupons');
+});
